@@ -1,13 +1,22 @@
 public/
-
-node_modules
+.cache/
+coverage/
+dist/*
+!dist/index.html
+node_modules/
+logs
+*.log
 
 .npm
 package-lock.json
 npm-debug.log*
 
-logs
-*.log
-
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
 Thumbs.db
+
+

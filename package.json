@@ -4,15 +4,21 @@
   "description": "A basic project starter",
   "main": "index.js",
   "scripts": {
-    "watch-css": "sass --watch ./src/css/main.scss ./public/main.css",
-    "build-css": "sass --watch ./src/css/main.scss ./public/main.css"
+    "clean": "rm dist/bundle.js",
+    "build-dev": "webpack --mode development",
+    "build-prod": "webpack --mode production"
   },
   "devDependencies": {
-    "autoprefixer": "latest",
-    "cssnano": "latest",
-    "postcss": "latest",
-    "postcss-cli": "latest",
-    "sass": "^1.42.1"
+    "webpack": "^5.57.1",
+    "webpack-cli": "^4.9.0",
+    "eslint": "^7.32.0",
+    "html-webpack-plugin": "^5.3.2",
+    "css-loader": "^6.3.0",
+    "sass-loader": "^12.1.0",
+    "node-sass": "^6.0.1",
+    "style-loader": "^3.3.0",
+    "file-loader": "^6.2.0",
+    "prettier": "^2.4.1"
   },
   "browserslist": [
     "> 1%",
