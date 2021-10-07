@@ -1,3 +1,5 @@
+@use "sass:math";
+
 // ==
 // == Set up colors & variables
 // ==
@@ -191,9 +193,9 @@ pre.line-numbers {
 .line-numbers .line-numbers-rows {
   // TODO: gutter background is 1-2px off for some reason
   position: absolute;
-  top: -($code-spacing / 2);
-  padding: ($code-spacing / 2) 0;
-  left: -($line-number-indent) - ($code-spacing / 2);
+  top: - math.div($code-spacing, 2);
+  padding: math.div($code-spacing, 2) 0;
+  left: -($line-number-indent) - math.div($code-spacing, 2);
   pointer-events: none;
   width: $line-number-indent;  
   letter-spacing: -0.02rem;
@@ -209,7 +211,7 @@ pre.line-numbers {
       display: block;
       content: counter(linenumber);
       color: $code-gray-80;
-      padding-right: ($code-spacing / 2);
+      padding-right: math.div($code-spacing, 2);
       text-align: right;
     }
   }
